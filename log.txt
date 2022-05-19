@@ -1,0 +1,5 @@
+DriverManager.getConnection("jdbc:derby:USERDB;create=true")
+    trying org.apache.derby.jdbc.AutoloadedDriver
+SQLWarning: reason(Database 'USERDB' not created, connection made to existing database instead.) SQLState(01J01) vendor code(10000)
+getConnection returning org.apache.derby.jdbc.AutoloadedDriver
+SQLWarning: reason(No row was found for FETCH, UPDATE or DELETE; or the result of a query is an empty table.) SQLState(02000) vendor code(10000)

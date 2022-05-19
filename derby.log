@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu May 19 19:50:08 CST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0180-dc27-59f4-00000f1895a8 
+on database directory C:\Users\Mengyun Jia\IdeaProjects\java_im_chat_filetransfer\USERDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b 
+Loaded from file:/C:/Users/Mengyun%20Jia/IdeaProjects/java_im_chat_filetransfer/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=17.0.2+8-LTS-86
+user.dir=C:\Users\Mengyun Jia\IdeaProjects\java_im_chat_filetransfer
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
