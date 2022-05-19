@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/USERDB" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/lib/derby.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/mykeys.keystore" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/microdream/java_im_chat_filetransfer/Client.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/microdream/java_im_chat_filetransfer/Message.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/microdream/java_im_chat_filetransfer/Readme.md" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/microdream/java_im_chat_filetransfer/SendFile.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/microdream/java_im_chat_filetransfer/Server.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/microdream/java_im_chat_filetransfer/SubFrameRegister.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/microdream/java_im_chat_filetransfer/UserDatabase.java" charset="GBK" />
+  </component>
+</project>
