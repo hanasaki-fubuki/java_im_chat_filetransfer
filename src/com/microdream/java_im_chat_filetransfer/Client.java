@@ -43,6 +43,7 @@ public class Client extends JFrame {
 	private ObjectOutputStream oos;// 客户端通过oos向服务端发送消息，socket输出流封装成对象输出流
 	private String localUserName = "";
 	private String localPasswd;
+
 	// “在线用户列表ListModel”,用于维护“在线用户列表”中显示的内容
 	private final DefaultListModel<String> onlineUserDlm = new DefaultListModel<String>();
 	// 用于控制时间信息显示格式
@@ -138,8 +139,8 @@ public class Client extends JFrame {
 		passwordFieldPwd.setColumns(10);
 		panelNorth.add(passwordFieldPwd);
 
-		Component horizontalStrut_5 = Box.createHorizontalStrut(20);
-		panelNorth.add(horizontalStrut_5);
+		Component horizontalStrut5 = Box.createHorizontalStrut(20);
+		panelNorth.add(horizontalStrut5);
 		btnLogon = new JButton("\u767B\u5F55"); // “登录”按钮
 		btnLogon.addActionListener(new ActionListener() {
 			@Override
@@ -179,9 +180,11 @@ public class Client extends JFrame {
 							// 接收服务器发来的响应结果消息
 							ResultMessage msg = (ResultMessage) ois.readObject();
 							if (msg.getResult() == ResultMessage.LOGON_SUCCESS) {
+
 								// 在“消息记录”文本框中用红色添加“XX时间登录成功”的信息
 								String msgRecord = dateFormat.format(new Date()) + " 登录成功\r\n";
 								addMsgRecord(msgRecord, Color.red, 12, false, false);
+
 								// 创建并启动“后台监听线程”,监听并处理服务器传来的信息
 								new Thread(new ListeningHandler()).start();
 								// 将“登录”按钮设为“退出”按钮
@@ -222,8 +225,8 @@ public class Client extends JFrame {
 		});
 		panelNorth.add(btnLogon);
 
-		Component horizontalStrut_1 = Box.createHorizontalStrut(20);
-		panelNorth.add(horizontalStrut_1);
+		Component horizontalStrut1 = Box.createHorizontalStrut(20);
+		panelNorth.add(horizontalStrut1);
 
 		// 注册按钮
 		JButton btnRegister = new JButton("\u6CE8\u518C");
@@ -266,8 +269,8 @@ public class Client extends JFrame {
 		panelSouth.add(textFieldMsgToSend);
 		textFieldMsgToSend.setColumns(10);
 
-		Component horizontalStrut_4 = Box.createHorizontalStrut(20);
-		panelSouth.add(horizontalStrut_4);
+		Component horizontalStrut4 = Box.createHorizontalStrut(20);
+		panelSouth.add(horizontalStrut4);
 
 		chckbxPrivateChat = new JCheckBox("\u79C1\u804A");
 		panelSouth.add(chckbxPrivateChat);
@@ -353,7 +356,7 @@ public class Client extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser fileChooser = new JFileChooser("D:");
-				fileChooser.setFileSelectionMode(fileChooser.FILES_ONLY);
+				fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
 				int number = listOnlineUsers.getSelectedIndex(); // 获取鼠标选择的用户，从用户列表中获取
 				if (number == -1) { // 未选择用户
 					JOptionPane.showMessageDialog(null, "请选择一个用户发送文件");
@@ -416,7 +419,7 @@ public class Client extends JFrame {
 	}
 
 	//监听P2P
-	class P2PHandler implements Runnable{
+	class p2pHandler implements Runnable{
 
 		@Override
 		public void run() {
@@ -501,7 +504,7 @@ public class Client extends JFrame {
 			try {
 				p2pSocket = new DatagramSocket(msg.getPort());
 				System.out.println(msg.getPort());
-				new Thread(new P2PHandler()).start();
+				new Thread(new p2pHandler()).start();
 			} catch (SocketException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -646,6 +649,7 @@ public class Client extends JFrame {
 			}
 
 			// 接收文件
+			@Override
 			public void run() {
 				System.out.println("文件总长:" + fileSize);
 				int sum = 0;
