@@ -228,6 +228,7 @@ public class Client extends JFrame {
 		// 注册按钮
 		JButton btnRegister = new JButton("\u6CE8\u518C");
 		btnRegister.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				SubFrameRegister frame = new SubFrameRegister();
 				frame.setVisible(true);
@@ -349,6 +350,7 @@ public class Client extends JFrame {
 		// 发送文件按钮
 		btnSendFile = new JButton("\u53D1\u9001\u6587\u4EF6");
 		btnSendFile.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser fileChooser = new JFileChooser("D:");
 				fileChooser.setFileSelectionMode(fileChooser.FILES_ONLY);
